@@ -1,0 +1,50 @@
+#include <stdio.h>
+#include <conio.h>
+
+typedef struct Livros
+{
+    int cod;
+    char titulo[15];
+    char autor[15];
+    char area[15];
+    int ano;
+    char editora[15];
+}Livros;
+
+int main ()
+{
+    Livros livro[5];
+    int op, i;
+    i=0, op;
+
+    while(op =! 5)
+    {
+        printf("\nSelecione a opcao desejada: ");
+        printf("\n[1] - Cadastrar Livros ");
+        printf("\n[2] - Informacoes");
+        printf("\n[3] - Pesquisa por codigo");
+        printf("\n[4] - Ordenar por ano");
+        printf("\n[5] - Sair");
+        scanf("%d", &op);
+
+        if(op == 1)
+        {
+            for(i=0; i<5; i++)
+            {
+                printf("Digite o novo CODIGO: ");
+                scanf("%d", &livro[i].cod);
+                printf("\nDigite o TITULO do novo livro: ");
+                scanf("%s", &livro[i].titulo);
+                printf("\nDigite o nome do AUTOR: ");
+                scanf("%s", &livro[i].autor);
+                printf("\nDigite qual a AREA: ");
+                scanf("%s", &livro[i].area);
+                printf("\Digite o ANO: ");
+                scanf("%d", &livro[i].ano);
+                printf("Digite a EDITORA: ");
+                scanf("%d", &livro[i].editora);
+            }
+        }
+    }
+    return 0;
+}
